@@ -1,5 +1,11 @@
+/* eslint-disable no-console */
 // TODO: write your code here
-import templateFunc from './basic';
+import GameSavingLoader from './GameSavingLoader';
 
-// eslint-disable-next-line no-console
-console.log(templateFunc('test'));
+GameSavingLoader.load()
+  .then((saving) => {
+    console.log(saving);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
